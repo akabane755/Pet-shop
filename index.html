@@ -18,6 +18,7 @@
                 lyellow: '#F9DF8A',
                 bgyellow: '#FFF9F4',
                 bglyellow:'rgba(255, 220, 38, 0.5)',
+                
               },
              fontFamily:{
                 'sora':['Sora', 'serif'],
@@ -30,19 +31,49 @@
         }
       </script>
       <style>
-        h1{
+        h1,marquee{
             font-family: "ADLaM Display", serif;
         }
+        @keyframes glow {
+      0%, 100% {
+        
+       
+        box-shadow:0 0 10px 0 rgba(255, 220, 38, 0.7); 
+        background: rgba(255, 220, 38, 0.7); 
+      }
+      25%,75% {
+        
+        box-shadow:0 0 10px 0 lightgreen; 
+        background: lightgreen;
+        color:white;
+        width:50%;
+      }
+      50% {
+        box-shadow:0 0 10px 0 greenyellow; 
+       background: greenyellow;
+         
+
+        
+      }
+    }
+
+    .glowb {
+      animation: glow;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      
+    }
       </style>
 </head>
 <body class="font-sora">
+    
     <div class="bg-bgyellow border-b-[0.5px] border-b-black  lg:border-b-0">
     <header class=" w-[92vw] lg:w-[82.5vw] mx-auto  flex justify-between items-center py-8">
         <div class="flex gap-3 items-center justify-center ">
             <img src="c1-assets/logo-header.png" alt="">
             <h2 class="hidden md:block text-[1.4rem]">Browse<span class="text-dyellow">4</span>pets</h2>
        </div>
-
+  
        <div class="w-[30%]" >
         <ul class=" hidden  lg:flex gap-8 items-center text-xl flex-wrap justify-center">
             <li>Find a pet</li>
@@ -74,14 +105,18 @@
         <p class="px-[30px] py-[10px] bg-dyellow rounded-lg hidden md:block">Register</p>
        </div>
     </header>
+   
 </div>
+
+    <marquee behavior="alternate" direction="left" scrollamount="15" class="text-4xl bg-red-300 text-white"><ul class="flex gap-8">🏡 Give a Furry Friend a Loving Home Today! 🐶🐱</marquee>
+
 <div class="w-[100vw] sm:w-[92vw] lg:w-[82.5vw] mx-auto mt-[32px] lg:mt-[100px] relative flex flex-col ">
  <div class="w-[92vw] lg:w-[82.5vw] mx-auto" >
     <div class="w-[100%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]  z-10 relative ">
 
     <h1 class="text-[2rem] sm:text-[2.5rem] xl:text-[3.5rem] ">Pamper Your Pet, Because They Deserve the Best</h1>
     <p class="text-xl mt-[16px] text-black/70 lg:text-black">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-    <button class="mt-[24px] text-xl bg-dyellow py-[10px] px-[30px] rounded-lg">Find a pet</button>
+    <button class="glowb mt-[24px] text-xl bg-dyellow py-[10px] px-[30px] rounded-lg">Find a pet</button>
 </div>
 </div>
     <img src="c1-assets/cat-big.png" alt="Cat" class="absolute top-[80%] sm:top-[70%] md:top-[40%]  lg:top-0 lg:w-[100%] w-[100vw] " >
@@ -366,7 +401,7 @@
     </div>
 </div>
 </div>
-<div class="bg-bgyellow lg:w-[82.5vw] w-[90vw] flex flex-col lg:flex-row justify-center items-center mx-auto rounded-lg p-[3%] relative  border-2 -bottom-[250px] lg:mt-[0px] mt-[300px] text-center lg:text-left">
+<div class="bg-bgyellow lg:w-[82.5vw] w-[90vw] flex flex-col lg:flex-row justify-center items-center mx-auto rounded-lg p-[3%] relative   -bottom-[250px] lg:mt-[0px] mt-[300px] text-center lg:text-left">
     <div class="lg:w-[40%] w-[70%] flex justify-center">
         <img src="c1-assets/cute-pet-mid.png" alt="">
     </div>
